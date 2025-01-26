@@ -49,7 +49,7 @@ Kategori Persona/Pemakai aplikasi adalah:
 
 
 ### Persona Petugas Laboratorium
-Misal: Petugsa Rontgen
+Misal: Petugas Rontgen.
 
 | Fitur | Via Menu |
 |---|--|
@@ -68,7 +68,7 @@ Misal: Petugsa Rontgen
 
 
 ### Persona Administrasi Rumah Sakit
-Untuk memasukkan data pokok rumah sakit sehinggan pemakaian aplikasi bisa disederhanakan dengan fitur pencarian.
+Untuk memasukkan data pokok rumah sakit sehingga pemakaian aplikasi bisa disederhanakan dengan fitur pencarian menggunakan singkatan.
 
 | Fitur | Via Menu |
 |---|--|
