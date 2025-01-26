@@ -1,0 +1,120 @@
+<html>    
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>    
+<style>   
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid;
+}    
+
+tr:nth-child(even) {
+    background-color: lightgray;
+}
+
+/*
+td:first-child {
+    width: 1px;
+    white-space: nowrap;    
+}
+
+td:nth-child(2) {
+    width: 1px;
+    white-space: nowrap;    
+}
+*/
+</style>    
+</head>
+<body style="font-family: Roboto;">
+<h1>Administrasi Tagihan (ke) BPJS</h1>
+<p>Versi: 2025-01-26</p>
+<br/>
+<p>Ini adalah dokumen design pembuatan Aplikasi Administrasi Tagihan (ke) BPJS.</p>
+
+<h2>Tujuan</h2>
+- Memudahkan administrasi, monitor dan menyelesaikan tagihan ke BPJS.
+
+<h2>Daftar Persona</h2>
+Kategori Persona/Pemakai aplikasi adalah:
+<ul>
+    <li>Resepsionis</li>
+    <li>Dokter</li>
+    <li>Petugas Laboratorium</li>
+    <li>Petugas Apotik</li>
+    <li>Bagian Keuangan untuk Proses Penagihan</li>
+    <li>Admin Rumah Sakit</li>
+    <li>Direktur Rumah Sakit</li>  
+</ul>
+
+
+<h3>Persona Resepsionis</h3>
+<table>
+<tr><th>Fitur</th><th>Via Menu</th></tr>
+<tr><td>Registrasi Pasien Baru</td><td>Menu Personal</td></tr>
+<tr><td>Ketik keluhan awal pasien</td><td>Menu Pasien</td></tr>
+<tr><td>Ubah Data Pasien</td><td>Menu Pasien</td></tr>
+<tr><td>Alokasi Pasien untuk konsultasi dokter</td><td>Menu Pasien</td></tr>
+<tr><td>Ubah alokasi Pasien untuk konsultasi dokter</td><td>Menu Pasien</td></tr>
+</table>
+
+
+<h3>Persona Dokter</h3>
+<table>
+<tr><th>Fitur</th><th>Via Menu</th></tr>
+<tr><td>Lihat Alokasi Pasien</td><td>Menu Antrian Pasien</td></tr>
+<tr><td>Lihat Narasi Keluhan</td><td>Menu Pasien</td></tr>
+<tr><td>Lihat History Kunjungan Sekarang</td><td>Menu Pasien</td></tr>
+<tr><td>Reassign Pasien ke dokter lain</td><td>Menu Pasien</td></tr>
+<tr><td>Alokasi layanan pasien. Contoh: Lab, Rontgen, Buat resep</td><td>Menu Kunjungan</td></tr>
+<tr><td>Registrasi tindakan</td><td>Menu Kunjungan</td></tr>
+<tr><td>Isi Jurnal tindakan</td><td>Menu Kunjungan</td></tr>
+<tr><td>Komen tambahan tentang pasien atau kunjungan | Menu Kunjungan</td></tr>
+</table>
+
+
+<h3>Persona Petugas Apotik</h3>
+<table>
+<tr><th>Fitur</th><th>Via Menu</th></tr>
+<tr><td>Cari Pasien</td><td>Menu Antrian Pasien</td></tr>
+<tr><td>Cari Dokter</td><td>Menu Antrian Pasien</td></tr>
+<tr><td>Untuk Pasien, Registrasi obat yang akan ditagihkan ke BPJS</td><td>Menu Resep</td></tr>
+</table>
+
+
+<h3>Persona Petugas Laboratorium</h3>
+<p>Misal: Petugas Rontgen.</p>
+<table>
+<tr><th>Fitur</th><th>Via Menu</th></tr>
+<tr><td>Cari Pasien</td><td>Menu Antrian Pasien</td></tr>
+<tr><td>Cari Dokter</td><td>Menu Antrian Pasien</td></tr>
+<tr><td>Untuk Pasien, Registrasi tindakan yang akan ditagihkan ke BPJS</td><td>Menu Lab</td></tr>
+</table>
+
+   
+<h3>Persona Bagian Keuangan</h3>
+<table>
+<tr><th>Fitur</th><th>Via Menu</th></tr>
+<tr><td>Cari Pasien</td><td>Menu Tagihan</td></tr>
+<tr><td>Cari Dokter</td><td>Menu Tagihan</td></tr>
+<tr><td>Lihat Daftar Tagihan</td><td>Menu Tagihan</td></tr>
+<tr><td>Check Kelengkapan Tagihan</td><td>Menu Tagihan</td></tr>
+</table>
+    
+<h3>Persona Administrasi Rumah Sakit</h3>
+<p>Untuk memasukkan data pokok rumah sakit sehingga pemakaian aplikasi bisa disederhanakan dengan fitur pencarian menggunakan singkatan.</p>
+
+<table>
+<tr><th>Fitur</th><th>Via Menu</th></tr>
+<tr><td>Cari Pasien</td><td>Menu Tagihan</td></tr>
+
+<tr><td>Isi Daftar Kamar Perawatan</td><td>Menu Fasilitas</td></tr>
+<tr><td>Isi Daftar Layanan atau Tindakan Dokter. Supaya bisa di-Search dengan singkatan</td><td>Menu Layanan</td></tr>
+<tr><td>Isi Daftar Obat. Supaya obat bisa di-Search dengan singkatan</td><td>Menu Obat</td></tr>
+</table>
+
+</body>
+</html>
