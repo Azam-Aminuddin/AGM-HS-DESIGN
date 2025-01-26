@@ -1,0 +1,76 @@
+<html>    
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />    
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>    
+<style>   
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid;
+}    
+
+tr:nth-child(even) {
+    background-color: lightgray;
+}
+</style>    
+</head>
+<body style="font-family: Roboto;">
+<h1>Administrasi Tagihan (ke) BPJS | Alur Pasien Masuk</h1>
+<p>Versi: 2025-01-26</p>
+<br/>
+
+<h2>Tujuan</h2>
+<p>Memberikan gambaran bagaimana pasien masuk, ditangani dokter sampai tagihan dikirim ke BPJS</p>
+
+<h2>Dokuman Lain</h2>
+<ul>
+<li><a href="index.html">Beranda</a></li>
+</ul>
+
+
+<h2>Alur Awal</h2>
+<table>
+<tr><th>#</th><th>Kejadian</th><th>Via Menu</th></tr>
+<tr><td>A1</td><td>Pasien melakukan registrasi ke Resepsionis.</td><td>&nbsp;</td></tr>
+<tr><td>A2</td><td>Jika pasien adalah peserta BPJS, pasien harus didaftarkan ke sistem supaya RS bisa menagih ke BPJS.<br/>
+Idealnya pasien harus harus mempunyai atau membawa NIK.<br/>
+Jika tidak, sistem bisa memberikan <b>no-registrasi-singkat</b> untuk administrasi. Tapi keharusan update data NIK masih diharuskan.
+</td><td>&nbsp;</td></tr>
+<tr><td>A3</td><td>Kalau Pasien sudah terdaftar sebelumnya, dicari dalam sistem dg nama, no. ktp atau alamat</td><td>&nbsp;</td></tr>
+<tr><td>A4</td><td>Resepsionis mendengarkan dan menuliskan keluhan awal.</td><td>&nbsp;</td></tr>
+<tr><td>A5</td><td>Berdasarkan keluhan Resepsionis alokasi pasien ke dokter yang available.</td><td>&nbsp;</td></tr>
+<tr><td>A6</td><td>Dg alokasi(#A5) Dokter bisa melihat daftar antriannya.</td><td>&nbsp;</td></tr>
+<tr><td>A7</td><td>Dokter bisa membaca keluhan awal yg telah diketikkan Resepsionis di (#A4)</td><td>&nbsp;</td></tr>
+<tr><td>A8</td><td>Ketika siap, konsultasi Dokter dilakukan. Dokter registrasi konsultasi ke sistem.</td><td>&nbsp;</td></tr>
+<tr><td>A9</td><td>Dokter bisa menuliskan jurnal kunjungan ke sistem.</td><td>&nbsp;</td></tr>
+<tr><td>A10</td><td>Dokter bisa alokasi layanan yg dibutuhkan pasien. Contoh layanan adalah: Layanan Lab, Rontgen.<br/>
+Alokasi ini bisa langsung dilihat sebagai antrian oleh Petugas Lab/Rontgen.</td><td>&nbsp;</td></tr>
+<tr><td>A11</td><td>Dokter bisa menulis resep. Perhatian! Resep tidak diadministrasi disini.</td><td>&nbsp;</td></tr>
+<tr><td>A12</td><td>Pasien bisa kembali ke Resepsionis untuk mendapatkan informasi tambahan ttg layanan (#A10)</td><td>&nbsp;</td></tr>
+</table>
+
+
+<h2>Alur Laboratorium/Rontgen</h2>
+<table>
+<tr><th>#</th><th>Kejadian</th><th>Via Menu</th></tr>
+<tr><td>B1</td><td>Petugas Lab bisa melihat daftar antrian. Misal dari (#A10).</td><td>&nbsp;</td></tr>
+<tr><td>B2</td><td>Ketika siap, layanan diregistrasi dan dilaksanakan.</td><td>&nbsp;</td></tr>
+</table>
+
+
+<h2>Alur Apotik</h2>
+<table>
+<tr><th>#</th><th>Kejadian</th><th>Via Menu</th></tr>
+<tr><td>&nbsp;</td><td>Setelah Pasien diregistrasi Resepsionis (#A1). Petugas Apotik sudah bisa mencari Data Pasien di sistem.</td><td>&nbsp;</td></tr>
+<tr><td>C1</td><td>Pasien (atau keluarganya) dg membawa resep dokter (#A11) datang ke Apotik. Menyerahkan resep dokter.</td><td>&nbsp;</td></tr>
+<tr><td>C2</td><td>Apotiker menyiapkan obat.</td><td>&nbsp;</td></tr>
+<tr><td>C3</td><td>Petugas harus meregistrasi semua obat yg akan ditagihkan ke BPJS.</td><td>&nbsp;</td></tr>
+</table>
+
+
+</body>
+</html>
