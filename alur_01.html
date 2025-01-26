@@ -35,21 +35,21 @@ tr:nth-child(even) {
 <h2>Alur Awal</h2>
 <table>
 <tr><th>#</th><th>Kejadian</th><th>Via Menu</th></tr>
-<tr><td>A1</td><td>Pasien melakukan registrasi ke Resepsionis.</td><td>&nbsp;</td></tr>
+<tr><td>A1</td><td>Pasien melakukan registrasi ke Resepsionis.</td><td>Menu Pasien</td></tr>
 <tr><td>A2</td><td>Jika pasien adalah peserta BPJS, pasien harus didaftarkan ke sistem supaya RS bisa menagih ke BPJS.<br/>
 Idealnya pasien harus harus mempunyai atau membawa NIK.<br/>
 Jika tidak, sistem bisa memberikan <b>no-registrasi-singkat</b> untuk administrasi. Tapi keharusan update data NIK masih diharuskan.
-</td><td>&nbsp;</td></tr>
-<tr><td>A3</td><td>Kalau Pasien sudah terdaftar sebelumnya, dicari dalam sistem dg nama, no. ktp atau alamat</td><td>&nbsp;</td></tr>
-<tr><td>A4</td><td>Resepsionis mendengarkan dan menuliskan keluhan awal.</td><td>&nbsp;</td></tr>
-<tr><td>A5</td><td>Berdasarkan keluhan pasien, Resepsionis alokasi pasien ke dokter yang <i>available</i>.</td><td>&nbsp;</td></tr>
-<tr><td>A6</td><td>Dg alokasi(#A5) Dokter bisa melihat daftar antriannya.</td><td>&nbsp;</td></tr>
-<tr><td>A7</td><td>Dokter bisa membaca keluhan awal yg telah diketikkan Resepsionis di (#A4)</td><td>&nbsp;</td></tr>
+</td><td>Menu Pasien</td></tr>
+<tr><td>A3</td><td>Kalau Pasien sudah terdaftar sebelumnya, dicari dalam sistem dg nama, no. ktp atau alamat</td><td>Menu Pasien</td></tr>
+<tr><td>A4</td><td>Resepsionis mendengarkan dan menuliskan keluhan awal.</td><td>Menu Kunjungan</td></tr>
+<tr><td>A5</td><td>Berdasarkan keluhan pasien, Resepsionis alokasi pasien ke dokter yang <i>available</i>.</td><td>Menu Pasien</td></tr>
+<tr><td>A6</td><td>Dg alokasi(#A5) Dokter bisa melihat daftar antriannya.</td><td>Menu AntrianKu</td></tr>
+<tr><td>A7</td><td>Dokter bisa membaca keluhan awal yg telah diketikkan Resepsionis di (#A4)</td><td>Menu AntrianKu</td></tr>
 <tr><td>A8</td><td>Ketika siap, konsultasi Dokter dilakukan. Dokter registrasi konsultasi ke sistem.<br/>
-Registrasi konsultasi ini diharuskan supaya RS bisa menagih ke BPJS.</td><td>&nbsp;</td></tr>
-<tr><td>A9</td><td>Dokter bisa menuliskan jurnal kunjungan ke sistem.</td><td>&nbsp;</td></tr>
+Registrasi konsultasi ini diharuskan supaya RS bisa menagih ke BPJS.</td><td>Menu Layanan/Konsultasi</td></tr>
+<tr><td>A9</td><td>Dokter bisa menuliskan jurnal kunjungan ke sistem.</td><td>Menu Layanan/Konsultasi</td></tr>
 <tr><td>A10</td><td>Dokter bisa alokasi layanan yg dibutuhkan pasien. Contoh layanan adalah: Layanan Lab, Rontgen.<br/>
-Alokasi ini bisa langsung dilihat sebagai antrian oleh Petugas Lab/Rontgen.</td><td>&nbsp;</td></tr>
+Alokasi ini bisa langsung dilihat sebagai antrian oleh Petugas Lab/Rontgen.</td><td>Menu Layanan/Konsultasi</td></tr>
 <tr><td>A11</td><td>Dokter bisa menulis resep. Perhatian! Resep tidak diadministrasi disini.</td><td>&nbsp;</td></tr>
 <tr><td>A12</td><td>Pasien bisa kembali ke Resepsionis untuk mendapatkan informasi tambahan ttg layanan (#A10)</td><td>&nbsp;</td></tr>
 </table>
@@ -58,9 +58,9 @@ Alokasi ini bisa langsung dilihat sebagai antrian oleh Petugas Lab/Rontgen.</td>
 <h2>Alur Laboratorium/Rontgen</h2>
 <table>
 <tr><th>#</th><th>Kejadian</th><th>Via Menu</th></tr>
-<tr><td>B1</td><td>Petugas Lab bisa melihat daftar antrian. Misal dari (#A10).</td><td>&nbsp;</td></tr>
+<tr><td>B1</td><td>Petugas Lab bisa melihat daftar antrian. Misal dari (#A10).</td><td>Menu AntrianKu</td></tr>
 <tr><td>B2</td><td>Ketika siap, layanan diregistrasi dan dilaksanakan.<br/>
-Registrasi layanan ini diharuskan supaya RS bisa menagih ke BPJS.</td><td>&nbsp;</td></tr>
+Registrasi layanan ini diharuskan supaya RS bisa menagih ke BPJS.</td><td>Menu Layanan</td></tr>
 </table>
 
 
@@ -70,7 +70,7 @@ Registrasi layanan ini diharuskan supaya RS bisa menagih ke BPJS.</td><td>&nbsp;
 <tr><td>&nbsp;</td><td>Setelah Pasien diregistrasi Resepsionis (#A1). Petugas Apotik sudah bisa mencari Data Pasien di sistem.</td><td>&nbsp;</td></tr>
 <tr><td>C1</td><td>Pasien (atau keluarganya) dg membawa resep dokter (#A11) datang ke Apotik. Menyerahkan resep dokter.</td><td>&nbsp;</td></tr>
 <tr><td>C2</td><td>Apotiker menyiapkan obat.</td><td>&nbsp;</td></tr>
-<tr><td>C3</td><td>Petugas harus meregistrasi semua obat yg akan ditagihkan ke BPJS.</td><td>&nbsp;</td></tr>
+<tr><td>C3</td><td>Petugas harus meregistrasi semua obat yg akan ditagihkan ke BPJS.</td><td>Menu Layanan</td></tr>
 </table>
 
 
@@ -81,34 +81,34 @@ Registrasi layanan ini diharuskan supaya RS bisa menagih ke BPJS.</td><td>&nbsp;
 <tr><td>&nbsp;</td><td>Setiap item registrasi ada perhitungan status informasi apakah sudah bisa ditagihkan.</td><td>&nbsp;</td></tr>
 <tr><td>&nbsp;</td><td>Setiap item registrasi ada template kelengkapan dokumen untuknya suksesnya proses penagihan.</td><td>&nbsp;</td></tr>
 <tr><td>D1</td><td>Bagian Keuangan bisa mencari Pasien dg nama, no. ktp atau alamat. 
-Untuk kemudian melihat layanan yg diterima Pasien dan bisa ditagihkan ke BPJS</td><td>&nbsp;</td></tr>
+Untuk kemudian melihat layanan yg diterima Pasien dan bisa ditagihkan ke BPJS</td><td>Cari Pasien</td></tr>
 <tr><td>D2</td><td>Bagian Keuangan bisa mencari Dokter dg nama, no. ktp atau alamat. 
-Untuk kemudian melihat layanan yg dilakukan Dokter dan bisa ditagihkan ke BPJS</td><td>&nbsp;</td></tr>
-<tr><td>D2</td><td>Bagian Keuangan bisa mencari Layanan Lab/Rontgen</td><td>&nbsp;</td></tr>
-<tr><td>D3</td><td>Bagian Keuangan bisa mencari Pemberian Obat</td><td>&nbsp;</td></tr>
+Untuk kemudian melihat layanan yg dilakukan Dokter dan bisa ditagihkan ke BPJS</td><td>Cari Dokter</td></tr>
+<tr><td>D2</td><td>Bagian Keuangan bisa mencari Layanan Lab/Rontgen</td><td>Cari Layanan</td></tr>
+<tr><td>D3</td><td>Bagian Keuangan bisa mencari Pemberian Obat</td><td>Cari Pemberian Obat</td></tr>
 </table>
 
 
 <h2>Alur Administrasi Rumah Sakit</h2>
 <table>
 <tr><th>#</th><th>Kejadian</th><th>Via Menu</th></tr>
-<tr><td>E1</td><td>Mengisi Daftar Kamar Inap. Menyediakan singkatan utk mudah dicari waktu pemberian layanan</td><td>&nbsp;</td></tr>
-<tr><td>E2</td><td>Mengisi Daftar Layanan. Menyediakan singkatan utk mudah dicari waktu pemberian layanan</td><td>&nbsp;</td></tr>
-<tr><td>E3</td><td>Mengisi/upload Daftar Obat. Menyediakan singkatan utk mudah dicari waktu registrasi pemberian obat</td><td>&nbsp;</td></tr>
-<tr><td>E4</td><td>Setting Data Personal sebagai Resepsionis</td><td>&nbsp;</td></tr>
-<tr><td>E5</td><td>Setting Data Personal sebagai Dokter</td><td>&nbsp;</td></tr>
-<tr><td>E6</td><td>Setting Data Personal sebagai Petugas Lab/Rontgen</td><td>&nbsp;</td></tr>
-<tr><td>E7</td><td>Setting Data Personal sebagai Petugas Apotik</td><td>&nbsp;</td></tr>
-<tr><td>E8</td><td>Aktifasi atau Deaktigas Pemakai</td><td>&nbsp;</td></tr>
+<tr><td>E1</td><td>Mengisi Daftar Kamar Inap. Menyediakan singkatan utk mudah dicari waktu pemberian layanan</td><td>Menu Fasilitas</td></tr>
+<tr><td>E2</td><td>Mengisi Daftar Layanan. Menyediakan singkatan utk mudah dicari waktu pemberian layanan</td><td>Menu Layanan</td></tr>
+<tr><td>E3</td><td>Mengisi/upload Daftar Obat. Menyediakan singkatan utk mudah dicari waktu registrasi pemberian obat</td><td>Menu Obat</td></tr>
+<tr><td>E4</td><td>Setting Data Personal sebagai Resepsionis</td><td>Menu Personal</td></tr>
+<tr><td>E5</td><td>Setting Data Personal sebagai Dokter</td><td>Menu Personal</td></tr>
+<tr><td>E6</td><td>Setting Data Personal sebagai Petugas Lab/Rontgen</td><td>Menu Personal</td></tr>
+<tr><td>E7</td><td>Setting Data Personal sebagai Petugas Apotik</td><td>Menu Personal</td></tr>
+<tr><td>E8</td><td>Aktifasi atau Deaktigas Pemakai</td><td>Menu Pemakai</td></tr>
 </table>
 
 
 <h2>Alur Direktur Rumah Sakit</h2>
 <table>
 <tr><th>#</th><th>Kejadian</th><th>Via Menu</th></tr>
-<tr><td>F1</td><td>Mencari Data Pasien dg nama, no.ktp, alamat</td><td>&nbsp;</td></tr>
-<tr><td>F2</td><td>Mencari Data Dokter</td><td>&nbsp;</td></tr>
-<tr><td>F3</td><td>Melihat daftar dan status tagihan ke BPJS</td><td>&nbsp;</td></tr>
+<tr><td>F1</td><td>Mencari Data Pasien dg nama, no.ktp, alamat</td><td>Cari Pasien</td></tr>
+<tr><td>F2</td><td>Mencari Data Dokter</td><td>Cari Dokter</td></tr>
+<tr><td>F3</td><td>Melihat daftar dan status tagihan ke BPJS</td><td>Menu Tagihan</td></tr>
 </table>
 
 
